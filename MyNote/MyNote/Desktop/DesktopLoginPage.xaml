@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNote.Desktop.DesktopLoginPage"
+             Title="DesktopLoginPage"
+             NavigationPage.HasNavigationBar="False">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="#FFF"
+                          Offset="0.1" />
+                <GradientStop Color="#D0D4E3"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Frame Grid.Column="0" Margin="10,10,10,10"
+               CornerRadius="30" HasShadow="True">
+            <Frame.Background>
+                <!-- StartPoint defaults to (0,0) -->
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#C0AEC3"
+                          Offset="0.1" />
+                    <GradientStop Color="#C664BE"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </Frame.Background>
+            <Image Source="introimg.png" Aspect="AspectFit" Margin="0"/>
+        </Frame>
+        <Frame BackgroundColor="Transparent" Grid.Column="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="120"></RowDefinition>
+                    <RowDefinition Height="280"></RowDefinition>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <HorizontalStackLayout Grid.Row="0" Margin="5,5,5,5" HorizontalOptions="EndAndExpand">
+                    <Label Text="Not a member?" TextColor="#262626" 
+                           FontFamily="InterMedium" FontSize="13"/>
+                    <Button Text="Register now" BackgroundColor="Transparent"
+                            TextColor="Blue" HeightRequest="40" BorderColor="Transparent"
+                            FontSize="13" FontFamily="InterMedium" Margin="0,0,0,22"
+                            WidthRequest="110" Clicked="Register_Click"/>
+                </HorizontalStackLayout>
+                <VerticalStackLayout Grid.Row="1" Margin="0,60,0,0">
+                    <Label Text="My Note" FontSize="35" TextColor="#C664BE" FontAttributes="Bold"
+                       FontFamily="InterExtraBold" CharacterSpacing="-0.5" HorizontalOptions="Center"
+                       Margin="0,0,0,10"/>
+                    <Label Text="Hello Again! Welcome back!"  FontSize="19" TextColor="#737373"
+                       CharacterSpacing="-1" HorizontalOptions="Center" FontFamily="InterRegular"/>
+                </VerticalStackLayout>
+                <Grid RowSpacing="5" Grid.Row="2" Margin="20,70,20,0"
+                      WidthRequest="380">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="74"/>
+                        <RowDefinition Height="70"/>
+                    </Grid.RowDefinitions>
+                    <Frame Grid.Row="0" BackgroundColor="White" Padding="0" BorderColor="Transparent"
+                   HorizontalOptions="Center" CornerRadius="10" Margin="10,0,10,0"
+                           WidthRequest="360">
+                        <StackLayout Orientation="Horizontal">
+                            <Entry HeightRequest="60" x:Name="txtUserName" Placeholder="Username" PlaceholderColor="#cdcdcd"
+                           FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                           Margin="0,0,0,0" FontFamily="InterRegular" FontSize="15" TextColor="#737373"
+                                   WidthRequest="358" />
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="1" BackgroundColor="White" Padding="0" BorderColor="Transparent"
+                   HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="10,10,10,0"
+                           WidthRequest="360">
+                        <StackLayout Orientation="Horizontal">
+                            <Entry HeightRequest="60" x:Name="txtPassword" Placeholder="Password" PlaceholderColor="#cdcdcd"
+                           FontAttributes="None" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                           Margin="0,0,0,0" FontFamily="InterRegular" FontSize="15" TextColor="#737373"
+                                   WidthRequest="358" IsPassword="True"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <StackLayout Grid.Row="2" Orientation="Horizontal" Margin="0,0,0,0" Padding="0"
+                                 HorizontalOptions="EndAndExpand">
+                        <Button x:Name="btnnn" Text="Forgot Password" FontAttributes="None" BackgroundColor="Transparent"
+                       HorizontalOptions="EndAndExpand" FontFamily="InterMedium" TextColor="#737373"
+                       Clicked="Forgot_Click" BorderColor="Transparent" HeightRequest="40"
+                                >
+                        </Button>
+                    </StackLayout>
+                </Grid>
+                <Button Margin="30,0,30,0" HeightRequest="55" Grid.Row="3" Text="Sign In"
+                Clicked="Login_Click" BackgroundColor="#C664BE" CornerRadius="15"
+                FontFamily="InterBold" FontAttributes="Bold" TextColor="White"
+                        WidthRequest="360">
+                </Button>
+               
+            </Grid>
+        </Frame>
+    </Grid>
+</ContentPage>

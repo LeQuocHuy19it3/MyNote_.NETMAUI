@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNote.Desktop.NoteDetai"
+             Title="NoteDetai"
+            xmlns:viewModels="clr-namespace:MyNote.ViewModels"
+             xmlns:models="clr-namespace:MyNote.Models"
+              xmlns:local="clr-namespace:MyNote.ViewModels"
+             x:DataType="viewModels:NoteViewModel"
+             NavigationPage.HasNavigationBar="False">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="#f1f1f1"
+                          Offset="0.1" />
+                <GradientStop Color="#e7e7e7"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="3"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame BorderColor="Transparent" Grid.Row="0">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#C664BE"
+                          Offset="0.1" />
+                    <GradientStop Color="#C0AEC3"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </Frame.Background>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <HorizontalStackLayout Spacing="10" Grid.Row="0" Grid.Column="0">
+                    <Image Source="notebook.png"
+                                       HeightRequest="15" Margin="0,0,0,13"/>
+                    <Label Text="Java" FontSize="16" FontFamily="InterMedium"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="End"
+                                       Spacing="5">
+                    <Button Text="Share" HeightRequest="35" BackgroundColor="#C664BE"
+                            />
+                    <Button ImageSource="settings.png" HeightRequest="45"
+                            BorderColor="Transparent"/>
+                </HorizontalStackLayout>
+                <Button Grid.Row="1" Grid.Column="0" ImageSource="tick.png" 
+                        WidthRequest="58" HeightRequest="40" HorizontalOptions="Start"
+                        BackgroundColor="Transparent" BorderColor="Transparent"
+                        Margin="0,20,0,0"/>
+            </Grid>
+        </Frame>
+        <Frame Grid.Row="1" Margin="10,10,10,0" Padding="0" BorderColor="Transparent"
+               CornerRadius="10">
+            <Entry HeightRequest="76" Text="{Binding NoteTest.noteName}" Margin="0,0,0,0"
+                   FontFamily="InterMedium" FontSize="20" TextColor="#737373"
+                   />
+        </Frame>
+        <BoxView Grid.Row="2" HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Center" HeightRequest="2" Color="LightGray"
+                 BackgroundColor="Gray" Margin="10,0,10,0"></BoxView>
+        <Frame Grid.Row="3" Margin="10,0,10,10" BorderColor="Transparent" Padding="0">
+            <ScrollView Padding="0">
+            <Editor x:Name="TextEditor"
+                    TextColor="#575757"
+                    Text="{Binding NoteTest.noteDetail}"
+                    FontFamily="InterMedium"
+                    FontSize="15"
+                    Margin="0,0,0,0"
+                    Placeholder=""
+                    PlaceholderColor="#cdcdcd"
+                    AutoSize="TextChanges"/>
+            </ScrollView>
+        </Frame>
+    </Grid>
+</ContentPage>

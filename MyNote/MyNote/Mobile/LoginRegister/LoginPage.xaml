@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNote.Mobile.LoginRegister.LoginPage"
+             NavigationPage.HasNavigationBar="False">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="#f1f1f1"
+                          Offset="0.1" />
+                <GradientStop Color="#e7e7e7"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="210"/>
+            <RowDefinition Height="210"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" ImageSource="back.svg" WidthRequest="50"  
+                Clicked="back1_click" BackgroundColor="Transparent" HorizontalOptions="Start"/>
+        <StackLayout Grid.Row="1" Margin="0,60,0,0">
+            <Label Text="My Note" FontSize="35" TextColor="#C664BE" FontAttributes="Bold"
+                       FontFamily="InterExtraBold" CharacterSpacing="-0.5" HorizontalOptions="Center"
+                       Margin="0,0,0,10"/>
+            <Label Text="Hello Again, Welcome back" FontSize="19" TextColor="#737373"
+                       CharacterSpacing="-1" HorizontalOptions="Center" FontFamily="InterRegular"
+                       />
+            <Label Text="my love!" FontSize="19" TextColor="#737373"
+                       CharacterSpacing="-1" HorizontalOptions="Center" FontFamily="InterRegular"
+                       />
+        </StackLayout>
+
+        <Grid RowSpacing="5" Grid.Row="2" Margin="20,20,20,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="74"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Frame Grid.Row="0" BackgroundColor="White" Padding="0" BorderColor="Transparent"
+                   HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="10,0,10,0">
+                <StackLayout Orientation="Horizontal">
+                    <Entry HeightRequest="53" x:Name="txtUserName" Placeholder="Username" PlaceholderColor="#cdcdcd"
+                           FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand"
+                           Margin="20,0,20,0" FontFamily="InterRegular" FontSize="15" TextColor="#737373"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Row="1" BackgroundColor="White" Padding="0" BorderColor="Transparent"
+                   HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="10,15,10,0">
+                <StackLayout Orientation="Horizontal">
+                    <Entry HeightRequest="55" x:Name="txtPassword"  Placeholder="Password" TextColor="#737373"
+                           FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand"
+                           Margin="20,0,20,0" FontSize="15" FontFamily="InterRegular" IsPassword="True"
+                           PlaceholderColor="#cdcdcd"/>
+                </StackLayout>
+            </Frame>
+
+            <StackLayout Grid.Row="2" Orientation="Horizontal" Margin="0,10,0,0" Padding="0">
+                <Button x:Name="btnnn" Text="Forgot Password" FontAttributes="Bold" BackgroundColor="Transparent"
+                       HorizontalOptions="EndAndExpand" FontFamily="InterMedium" TextColor="#737373"
+                       Clicked="Forgot_Click">
+                </Button>
+            </StackLayout>
+        </Grid>
+        <Button Margin="30,0,30,0" HeightRequest="55" Grid.Row="3" Text="Sign In"
+                Clicked="Login_Click" BackgroundColor="#C664BE" CornerRadius="15"
+                FontFamily="InterBold" FontAttributes="Bold" TextColor="White">
+        </Button>
+        <VerticalStackLayout Grid.Row="4" Margin="0,20,0,0">
+            <Label Text="----- Or continue with -----" TextColor="#929292" 
+                   HorizontalOptions="Center" FontSize="11" FontAttributes="Bold" FontFamily="InterRegular"/>
+            <HorizontalStackLayout Spacing="20" HorizontalOptions="CenterAndExpand" 
+                                   Margin="0,30,0,0">
+                <Button ImageSource="google.svg" 
+                        BackgroundColor="Transparent"/>
+                <Button ImageSource="facebook.svg" BackgroundColor="Transparent"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+        <HorizontalStackLayout Grid.Row="5" HorizontalOptions="Center" Margin="0,60,0,0" Spacing="2">
+            <Label Text="Not a member? " TextColor="#929292" FontFamily="InterRegular"
+               FontAttributes="Bold" FontSize="12" />
+            <Button TextColor="Blue" FontSize="12" Text="Register now" HeightRequest="20" 
+                    Padding="0" Margin="0,0,0,32" FontAttributes="Bold" BackgroundColor="Transparent"
+                    FontFamily="InterRegular" Clicked="Register2_Click">
+                
+            </Button>
+        </HorizontalStackLayout>
+        
+    </Grid>
+
+</ContentPage>

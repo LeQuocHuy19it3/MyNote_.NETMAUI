@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\API\LoginAPI</_PublishTargetUrl>
+    <History>True|2022-11-20T12:19:01.3000297Z;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

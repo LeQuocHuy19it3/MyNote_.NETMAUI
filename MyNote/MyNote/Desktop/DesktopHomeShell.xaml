@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       x:Class="MyNote.Desktop.DesktopHomeShell"
+       Title="sdsd"
+       NavigationPage.HasNavigationBar="False"
+       NavigationPage.HasBackButton="False"
+       Shell.FlyoutBehavior="Disabled"
+
+       Shell.NavBarIsVisible="False"
+       xmlns:local="clr-namespace:MyNote.Desktop"
+       xmlns:views="clr-namespace:MyNote.Mobile.MainLayout"
+       >
+    <TabBar x:Name="PhoneTabs">
+        <TabBar.Style>
+            <Style TargetType="Tab">
+                <Setter Property="Shell.TabBarBackgroundColor"
+        Value="White" />
+                <Setter Property="Shell.TabBarForegroundColor"
+        Value="Black" />
+                <Setter Property="Shell.TabBarUnselectedColor"
+        Value="Green" />
+            </Style>
+        </TabBar.Style>
+        <Tab Title="Home" Icon="home.png" >
+            <ShellContent ContentTemplate="{DataTemplate local:DesktopHomePage}"/>
+        </Tab>
+        <Tab Title="Notebook" Icon="notebook.png">
+            <ShellContent ContentTemplate="{DataTemplate local:DesktopNotebookPage}"/>
+        </Tab>
+        <Tab Title="Note" Icon="clipboard.png">
+            <ShellContent ContentTemplate="{DataTemplate local:DesktopAllNotePage}"/>
+        </Tab>
+        <Tab Title="Favorite Note" Icon="favorite.png">
+            <ShellContent ContentTemplate="{DataTemplate local:DesktopFavoritePage}"/>
+        </Tab>
+        <Tab Title="Schedule" Icon="calendar.png">
+            <ShellContent ContentTemplate="{DataTemplate views:MobileSchedulePage}"/>
+        </Tab>
+        <Tab Title="About MyNote" Icon="information.png">
+            <ShellContent ContentTemplate="{DataTemplate local:DesktopAboutPage}"/>
+        </Tab>
+        <Tab Title="Account" Icon="acc.png">
+            <ShellContent ContentTemplate="{DataTemplate local:DesktopAccountPage}"/>
+        </Tab>
+    </TabBar>
+    
+
+</Shell>

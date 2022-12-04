@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNote.Mobile.IntroPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="IntroPage"
+             NavigationPage.HasNavigationBar="False">
+    <Grid BackgroundColor="#D0D4E3">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="#FFF"
+                          Offset="0.1" />
+                <GradientStop Color="#D0D4E3"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="410"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Frame Grid.Row="0" Margin="10,10,10,10" CornerRadius="40" BorderColor="#C0AEC3" HasShadow="True">
+            <Frame.Background>
+                <!-- StartPoint defaults to (0,0) -->
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#C0AEC3"
+                          Offset="0.1" />
+                    <GradientStop Color="#C664BE"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </Frame.Background>
+            <Image Source="introimg.png" Aspect="AspectFit" Margin="0"/>
+        </Frame>
+        <StackLayout Grid.Row="1" Margin="0,30,0,0">
+            <Label Text="My Note" FontSize="35" TextColor="#C664BE" FontAttributes="Bold"
+                       FontFamily="InterExtraBold" CharacterSpacing="-1" HorizontalOptions="Center"
+                       />
+            <Label Text="Take Note Everywhere" FontSize="30" TextColor="#575757" FontAttributes="Bold"
+                       FontFamily="InterExtraBold" CharacterSpacing="-1" HorizontalOptions="Center"
+                       />
+            <VerticalStackLayout Margin="0,30,0,0">
+                <Label Text="Welcome to My Note" FontSize="14" TextColor="#80807e" 
+                           FontAttributes="None" CharacterSpacing="-1" HorizontalOptions="Center"
+                           FontFamily="InterRegular"/>
+                <Label Text="Where you can take notes and review anything" FontSize="14" TextColor="#80807e" 
+                           FontAttributes="None" CharacterSpacing="-1" HorizontalOptions="Center"
+                            FontFamily="InterRegular"/>
+            </VerticalStackLayout>
+        </StackLayout>
+        <HorizontalStackLayout Grid.Row="2" HorizontalOptions="Center">
+            <Button x:Name="btnRegister" Clicked="Register_Click" Text="Register" FontSize="15"
+                        FontAttributes="Bold" TextColor="#424242" WidthRequest="150"
+                        BackgroundColor="#C0AEC3" FontFamily="InterBold">
+            </Button>
+            <Button x:Name="btnLogin1" Clicked="Login1_Click" Text="Signin" FontSize="15" FontFamily="InterBold"
+                        FontAttributes="Bold" WidthRequest="150" BackgroundColor="White" TextColor="#424242"
+                        >
+                
+            </Button>
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "x/I/4+DyHzHbRWzTDEPf7bgAOwti6g3dSMa+FjRFumY=",
+  "Source": "ORCLAPI",
+  "BasePath": "_content/ORCLAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

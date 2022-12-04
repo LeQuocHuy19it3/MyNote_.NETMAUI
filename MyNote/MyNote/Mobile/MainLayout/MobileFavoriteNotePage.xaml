@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNote.Mobile.MainLayout.MobileFavoriteNotePage"
+             Title="MobileFavoriteNotePage"
+              xmlns:viewModels="clr-namespace:MyNote.ViewModels"
+             xmlns:models="clr-namespace:MyNote.Models"
+             x:DataType="viewModels:NoteViewModel"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="#f1f1f1"
+                          Offset="0.1" />
+                <GradientStop Color="#e7e7e7"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame BorderColor="Transparent" Grid.Row="0">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#C664BE"
+                          Offset="0.1" />
+                    <GradientStop Color="#C0AEC3"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </Frame.Background>
+            <HorizontalStackLayout Spacing="0">
+                <Button ImageSource="back.svg" WidthRequest="50"  
+                Clicked="back1_click" BackgroundColor="Transparent" HorizontalOptions="Start"
+                        Margin="0,0,20,0"/>
+                <Label Text="FAVORITES" TextColor="White" FontFamily="InterExtraBold"
+                       FontAttributes="Bold" FontSize="18" Margin="0,2,0,0" />
+            </HorizontalStackLayout>
+        </Frame>
+        <Frame Grid.Row="1" Margin="5,10,5,5" Padding="0" BorderColor="Transparent"
+               CornerRadius="40">
+            <SearchBar x:Name="searchNote" Placeholder="Search note ..."
+                       HeightRequest="60" TextColor="#575757" WidthRequest="400"
+                       FontFamily="InterMedium" FontSize="16" PlaceholderColor="#cdcdcd"
+                       ></SearchBar>
+        </Frame>
+        <Frame Grid.Row="2" Margin="5,5,5,10" BorderColor="Transparent">
+            <CollectionView ItemsSource="{Binding noteList}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:NoteModel">
+                        <FlexLayout Wrap="Wrap" HorizontalOptions="Center" JustifyContent="Center"
+                                    >
+                            <Frame HeightRequest="120" WidthRequest="340" Padding="0" 
+                                   BackgroundColor="#ffe8f6" Margin="0,5,0,15"
+                               BorderColor="Transparent" HorizontalOptions="Center">
+                                <StackLayout>
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding noteName}" TextColor="Black"
+                                        HeightRequest="30" BackgroundColor="Transparent"
+                                         FontFamily="InterSemiBold" WidthRequest="330" CharacterSpacing="-1.3"
+                                        FontSize="15" HorizontalOptions="Start" Margin="20,10,0,0"/>
+                                    <Label x:Name="lblDetail" Grid.Row="0" Grid.Column="0" Text="{Binding noteDetail}" TextColor="#8d8d8d"
+                                       FontFamily="InterRegular" FontSize="12" FontAttributes="Italic"
+                                       Margin="20,0,10,0" MaxLines="3" LineBreakMode="TailTruncation"
+                                           HeightRequest="30"/>
+                                    <Button x:Name="btnViewMore" Grid.Row="0" Grid.Column="1" Text="View more ..."
+                                        HeightRequest="40" WidthRequest="105" Margin="20,0,10,0"
+                                        BackgroundColor="#C664BE" TextColor="White" CornerRadius="50"
+                                             FontFamily="InterBold" FontSize="12" HorizontalOptions="End"
+                                            FontAttributes="Italic"/>
+                                </StackLayout>
+                            </Frame>
+                        </FlexLayout>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </Frame>
+    </Grid>
+</ContentPage>

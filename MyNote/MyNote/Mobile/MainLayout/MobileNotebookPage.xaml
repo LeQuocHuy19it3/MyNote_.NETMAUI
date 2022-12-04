@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNote.Mobile.MainLayout.MobileNotebookPage"
+             xmlns:viewModels="clr-namespace:MyNote.ViewModels"
+             xmlns:models="clr-namespace:MyNote.Models"
+              x:DataType="viewModels:NotebookViewModel"
+             NavigationPage.HasNavigationBar="False">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="#f1f1f1"
+                          Offset="0.1" />
+                <GradientStop Color="#e7e7e7"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame BorderColor="Transparent" Grid.Row="0">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#C664BE"
+                          Offset="0.1" />
+                    <GradientStop Color="#C0AEC3"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </Frame.Background>
+            <HorizontalStackLayout Spacing="200">
+                <Label Text="NOTEBOOK" TextColor="White" FontFamily="InterExtraBold"
+                       FontAttributes="Bold" FontSize="18" Margin="0,2,0,0" />
+                <Button Grid.Row="0" ImageSource="notebookadd1.svg" WidthRequest="50"  
+                Clicked="Add_Click" BackgroundColor="Transparent" HorizontalOptions="Start"
+                        />
+            </HorizontalStackLayout>
+        </Frame>
+        <Frame Grid.Row="1" Margin="5,10,5,5" Padding="0" BorderColor="Transparent"
+               CornerRadius="40">
+            <SearchBar x:Name="searchNotebook" Placeholder="Search notebook ..."
+                       HeightRequest="60" TextColor="#575757" WidthRequest="400"
+                       FontFamily="InterMedium" FontSize="16" PlaceholderColor="#cdcdcd"
+                       ></SearchBar>
+        </Frame>
+        <Frame Grid.Row="2" Margin="5,5,5,10" BorderColor="Transparent">
+            <CollectionView ItemsSource="{Binding notebookList}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:NotebookModel">
+                        <Frame HeightRequest="50" Padding="0" BackgroundColor="Transparent"
+                               BorderColor="Transparent">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="300" />
+                                    <ColumnDefinition Width="30" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding notebookName}" TextColor="#575757"
+                                        HeightRequest="50" BackgroundColor="Transparent"
+                                         FontFamily="InterMedium" WidthRequest="100"
+                                        FontSize="17" HorizontalOptions="Start" Margin="10,25,0,0"/>
+                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding dateCreate}" TextColor="#8d8d8d"
+                                       FontFamily="InterMedium" FontSize="12" FontAttributes="Italic"
+                                       Margin="220,17,0,0"/>
+                                <Button Grid.Row="0" Grid.Column="1" ImageSource="right.svg"
+                                        HeightRequest="45" WidthRequest="35" Margin="20,0,0,0"
+                                        BackgroundColor="Transparent"/>
+                                <BoxView Grid.Row="1" HorizontalOptions="FillAndExpand"
+                                         VerticalOptions="Center" HeightRequest="2"
+                                         BackgroundColor="LightGray" Grid.ColumnSpan="2"></BoxView>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </Frame>
+    </Grid>
+    
+</ContentPage>

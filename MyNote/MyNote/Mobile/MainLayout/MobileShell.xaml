@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNote.Mobile.MainLayout.MobileShell"
+             xmlns:local="clr-namespace:MyNote.Mobile.MainLayout"
+             xmlns:views="clr-namespace:MyNote.Mobile.MainLayout"
+             Title="MobileShell"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False">
+    <TabBar x:Name="PhoneTabs">
+        <Tab Title="Home" Icon="homes.svg">
+            <ShellContent ContentTemplate="{DataTemplate local:MobileHomePage}"/>
+        </Tab>
+        <Tab Title="Notebook" Icon="notebooks.svg">
+            <ShellContent ContentTemplate="{DataTemplate local:MobileNotebookPage}"/>
+        </Tab>
+        <Tab Title="TDL" Icon="todolist.svg">
+            <ShellContent ContentTemplate="{DataTemplate local:MobileTodolistPage}"/>
+        </Tab>
+        <Tab Title="Schedule" Icon="schedule.svg">
+            <ShellContent ContentTemplate="{DataTemplate local:MobileSchedulePage}"/>
+        </Tab>
+        <Tab Title="Setting" Icon="setting.svg">
+            <ShellContent ContentTemplate="{DataTemplate local:MobileAllSettingPage}"/>
+        </Tab>
+
+    </TabBar>
+
+
+</Shell>

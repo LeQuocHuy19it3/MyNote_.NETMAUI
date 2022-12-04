@@ -1,0 +1,221 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net6.0-ios;net6.0-maccatalyst;net6.0-android31.0</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net6.0-windows10.0.19041.0</TargetFrameworks>
+		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
+		<OutputType>Exe</OutputType>
+		<RootNamespace>MyNote</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+
+		<!-- Display name -->
+		<ApplicationTitle>MyNote</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.companyname.mynote</ApplicationId>
+		<ApplicationIdGuid>e308d09c-2ccd-4f29-b1ed-c207748e6dc6</ApplicationIdGuid>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- App Icon -->
+
+		<!-- Splash Screen -->
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+		<MauiImage Update="Resources\Images\google.svg" BaseSize="56,56" />
+		<MauiImage Update="Resources\Images\facebook.svg" BaseSize="56,56" />
+		<MauiImage Update="Resources\Images\back.svg" BaseSize="35,35" />
+		<MauiImage Update="Resources\Images\setting2.svg" BaseSize="35,35" />
+		<MauiImage Update="Resources\Images\notebookadd1.svg" BaseSize="30,30" />
+		<MauiImage Update="Resources\Images\notebookadd2.svg" BaseSize="30,30" />
+		<MauiImage Update="Resources\Images\addnote.svg" BaseSize="30,30" />
+		<MauiImage Update="Resources\Images\notes.svg" BaseSize="35,35" />
+		<MauiImage Update="Resources\Images\star.svg" BaseSize="35,35" />
+		<MauiImage Update="Resources\Images\trash.svg" BaseSize="35,35" />
+		<MauiImage Update="Resources\Images\share.svg" BaseSize="35,35" />
+		<MauiImage Update="Resources\Images\about.svg" BaseSize="35,35" />
+		<MauiImage Update="Resources\Images\logout.svg" BaseSize="35,35" />
+		<MauiImage Update="Resources\Images\right.svg" BaseSize="25,25" />
+		<MauiImage Update="Resources\Images\notebookmain.svg" BaseSize="50,50" />
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\AppIcon\appicon.svg" />
+	  <None Remove="Resources\Fonts\Inter-Black.ttf" />
+	  <None Remove="Resources\Fonts\Inter-Bold.ttf" />
+	  <None Remove="Resources\Fonts\Inter-ExtraBold.ttf" />
+	  <None Remove="Resources\Fonts\Inter-ExtraLight.ttf" />
+	  <None Remove="Resources\Fonts\Inter-Light.ttf" />
+	  <None Remove="Resources\Fonts\Inter-Medium.ttf" />
+	  <None Remove="Resources\Fonts\Inter-Regular.ttf" />
+	  <None Remove="Resources\Fonts\Inter-SemiBold.ttf" />
+	  <None Remove="Resources\Fonts\Inter-Thin.ttf" />
+	  <None Remove="Resources\Fonts\OpenSans-ExtraBold.ttf" />
+	  <None Remove="Resources\Images\about.png" />
+	  <None Remove="Resources\Images\about.svg" />
+	  <None Remove="Resources\Images\acc.png" />
+	  <None Remove="Resources\Images\addnote.svg" />
+	  <None Remove="Resources\Images\back.svg" />
+	  <None Remove="Resources\Images\calendar.png" />
+	  <None Remove="Resources\Images\clipboard.png" />
+	  <None Remove="Resources\Images\dashboard_black.png" />
+	  <None Remove="Resources\Images\dashboard_white.png" />
+	  <None Remove="Resources\Images\facebook.png" />
+	  <None Remove="Resources\Images\facebook.svg" />
+	  <None Remove="Resources\Images\favorite.png" />
+	  <None Remove="Resources\Images\google.png" />
+	  <None Remove="Resources\Images\google.svg" />
+	  <None Remove="Resources\Images\home.png" />
+	  <None Remove="Resources\Images\homes.svg" />
+	  <None Remove="Resources\Images\information.png" />
+	  <None Remove="Resources\Images\introimg.png" />
+	  <None Remove="Resources\Images\logout.svg" />
+	  <None Remove="Resources\Images\notebook.png" />
+	  <None Remove="Resources\Images\notebookadd1.svg" />
+	  <None Remove="Resources\Images\notebookadd2.svg" />
+	  <None Remove="Resources\Images\notebookmain.png" />
+	  <None Remove="Resources\Images\notebookmain.svg" />
+	  <None Remove="Resources\Images\notebooks.svg" />
+	  <None Remove="Resources\Images\notes.png" />
+	  <None Remove="Resources\Images\notes.svg" />
+	  <None Remove="Resources\Images\question.png" />
+	  <None Remove="Resources\Images\right.svg" />
+	  <None Remove="Resources\Images\schedule.svg" />
+	  <None Remove="Resources\Images\setting.svg" />
+	  <None Remove="Resources\Images\setting2.svg" />
+	  <None Remove="Resources\Images\settings.png" />
+	  <None Remove="Resources\Images\setting_white.png" />
+	  <None Remove="Resources\Images\share.svg" />
+	  <None Remove="Resources\Images\star.png" />
+	  <None Remove="Resources\Images\star.svg" />
+	  <None Remove="Resources\Images\tick.png" />
+	  <None Remove="Resources\Images\todolist.svg" />
+	  <None Remove="Resources\Images\trash.png" />
+	  <None Remove="Resources\Images\trash.svg" />
+	  <None Remove="Resources\Images\user.svg" />
+	  <None Remove="Resources\Splash\splash.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiIcon Include="Resources\AppIcon\appicon.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="008080" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="CommunityToolkit.Maui" Version="2.0.0" />
+	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+	  <PackageReference Include="Syncfusion.Maui.Core" Version="20.3.58" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Desktop\DesktopAboutPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Desktop\DesktopAccountPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Desktop\DesktopAllNotePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Desktop\DesktopFavoritePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Desktop\DesktopHomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Desktop\DesktopHomeShell.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Desktop\DesktopLoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Desktop\DesktopNotebookPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Desktop\DesktopNoteDetailPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Desktop\DesktopRegisterPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Desktop\NoteDetai.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Desktop\ShellBase.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Mobile\LoginRegister\ForgotPassword.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Mobile\IntroPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Mobile\LoginRegister\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Mobile\MainLayout\MobileAboutMePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Mobile\MainLayout\MobileAllNotePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Mobile\MainLayout\MobileAllSettingPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Mobile\MainLayout\MobileFavoriteNotePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Mobile\MainLayout\MobileHomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Mobile\MainLayout\MobileNotebookPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Mobile\MainLayout\MobileNoteDetailPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Mobile\MainLayout\MobileSchedulePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Mobile\MainLayout\MobileSharePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Mobile\MainLayout\MobileShell.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Mobile\LoginRegister\RegisterPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Mobile\MainLayout\MobileTodolistPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+</Project>

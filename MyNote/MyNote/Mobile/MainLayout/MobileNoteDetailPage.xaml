@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNote.Mobile.MainLayout.MobileNoteDetailPage"
+             Title="MobileNoteDetailPage"
+             xmlns:viewModels="clr-namespace:MyNote.ViewModels"
+             xmlns:models="clr-namespace:MyNote.Models"
+              xmlns:local="clr-namespace:MyNote.ViewModels"
+             x:DataType="viewModels:NoteViewModel"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.BindingContext>
+        <local:NoteViewModel />
+    </ContentPage.BindingContext>
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="#f1f1f1"
+                          Offset="0.1" />
+                <GradientStop Color="#e7e7e7"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame BorderColor="Transparent" Grid.Row="0">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#C664BE"
+                          Offset="0.1" />
+                    <GradientStop Color="#C0AEC3"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </Frame.Background>
+            <HorizontalStackLayout Spacing="0">
+                <Button ImageSource="back.svg" WidthRequest="50"  
+                Clicked="back1_click" BackgroundColor="Transparent" HorizontalOptions="Start"
+                        Margin="0,0,20,0"/>
+
+            </HorizontalStackLayout>
+        </Frame>
+        <Frame Grid.Row="1" Margin="5,10,5,5" Padding="0" BorderColor="Transparent"
+               CornerRadius="10" >
+            <Entry HeightRequest="76" Text="{Binding NoteTest.noteName}" Margin="20,5,5,5"
+                   FontFamily="InterSemiBold" FontSize="20" TextColor="#737373"/>
+        </Frame>
+        <Frame Grid.Row="2" Margin="5,5,5,10" BorderColor="Transparent">
+            <ScrollView Margin="5">
+                <Editor x:Name="TextEditor"
+                        TextColor="#737373"
+                        FontSize="18"
+                        Placeholder="Enter your note"
+                        Text="{Binding NoteTest.noteDetail}"
+                        AutoSize="TextChanges"
+                       />
+            </ScrollView>
+
+        </Frame>
+    </Grid>
+</ContentPage>

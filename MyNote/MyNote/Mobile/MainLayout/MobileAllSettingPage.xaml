@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNote.Mobile.MainLayout.MobileAllSettingPage"
+             NavigationPage.HasNavigationBar="False">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="#f1f1f1"
+                          Offset="0.1" />
+                <GradientStop Color="#e7e7e7"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Frame Grid.Row="0" BorderColor="Transparent" Margin="5,5,5,5" Padding="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" StrokeShape="RoundRectangle 50" WidthRequest="70"
+                        HeightRequest="70" StrokeThickness="2" Margin="0,0,0,0" 
+                        BackgroundColor="#C0AEC3">
+                    <Image Source="user.svg" HeightRequest="65" WidthRequest="65"/>
+                </Border>
+                <VerticalStackLayout Grid.Column="1" HorizontalOptions="StartAndExpand"
+                                     Margin="0,18,0,0">
+                    <Label Text="Hanh Hoa" TextColor="Black" FontFamily="InterBold"
+                           FontSize="20" />
+                    <HorizontalStackLayout>
+                        <Label Text="Woman" TextColor="Black" FontFamily="InterRegular"/>
+                        <Label Text=" - " TextColor="Black" FontFamily="InterRegular"/>
+                        <Label Text="29/11/2022" TextColor="Black" FontFamily="InterRegular"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+                <Button ImageSource="setting2.svg" Grid.Column="2" BackgroundColor="Transparent"/>
+            </Grid>
+        </Frame>
+        <Frame Grid.Row="1" Margin="5,5,5,5" BackgroundColor="Transparent" Padding="0"
+               BorderColor="Transparent" >
+            <VerticalStackLayout>
+                <Frame HeightRequest="60" Padding="1" CornerRadius="30" BorderColor="Transparent"
+                       HorizontalOptions="Start" Margin="0,5,0,3" BackgroundColor="Transparent">
+                    <Button ImageSource="notes.svg" Text="All Notes" TextColor="Black"  FontFamily="InterMedium"
+                                FontSize="17" WidthRequest="380" ContentLayout="0" 
+                            BorderWidth="2" BorderColor="LightGray" CornerRadius="30"
+                            Clicked="Notes_Click" BackgroundColor="White"/>
+                </Frame>
+                <Frame HeightRequest="60" Padding="1" CornerRadius="30" BorderColor="Transparent"
+                       HorizontalOptions="Start" Margin="0,3,0,3">
+                    <Button ImageSource="star.svg" Text="Favorites" TextColor="Black"  FontFamily="InterMedium"
+                                FontSize="17" WidthRequest="380" ContentLayout="0" 
+                            BorderWidth="2" BorderColor="LightGray" CornerRadius="30"
+                            BackgroundColor="White" Clicked="Favoritr_Click"/>
+                </Frame>
+                <Frame HeightRequest="60" Padding="1" CornerRadius="30" BorderColor="Transparent"
+                       HorizontalOptions="Start" Margin="0,3,0,3">
+                    <Button ImageSource="share.svg" Text="Shared with me" TextColor="Black"  FontFamily="InterMedium"
+                                FontSize="17" WidthRequest="380" ContentLayout="0" 
+                            BorderWidth="2" BorderColor="LightGray" CornerRadius="30"
+                            BackgroundColor="White" Clicked="Shared_Click"/>
+                </Frame>
+                <BoxView Grid.Row="1" HorizontalOptions="FillAndExpand"
+                                         VerticalOptions="Center" HeightRequest="5"
+                                         BackgroundColor="LightGray" Grid.ColumnSpan="2"
+                         Margin="0,20,0,20"></BoxView>
+                <Frame HeightRequest="60" Padding="1" CornerRadius="30" BorderColor="Transparent"
+                       HorizontalOptions="Start" Margin="0,3,0,3">
+                    <Button ImageSource="about.svg" Text="About" TextColor="Black"  FontFamily="InterMedium"
+                            FontSize="17" WidthRequest="380" ContentLayout="0" 
+                            BorderWidth="2" BorderColor="LightGray" CornerRadius="30"
+                            BackgroundColor="White" Clicked="About_Click"/>
+                </Frame>
+                <Frame HeightRequest="60" Padding="1" CornerRadius="30" BorderColor="Transparent"
+                       HorizontalOptions="Start" Margin="0,3,0,3">
+                    <Button ImageSource="logout.svg" Text="Sign Out" TextColor="Black"  FontFamily="InterMedium"
+                            FontSize="17" WidthRequest="380" ContentLayout="0" 
+                            BorderWidth="2" BorderColor="LightGray" CornerRadius="30"
+                            BackgroundColor="White" Clicked="SignOut_Click"/>
+                </Frame>
+            </VerticalStackLayout>
+        </Frame>
+        <Label Grid.Row="2" Text="Developed by Tran Thi Hanh Hoa" TextColor="#787878"
+               FontFamily="InterMedium" FontAttributes="Italic" FontSize="11" HorizontalOptions="Center"
+               Margin="0,10,0,0" CharacterSpacing="-1" WidthRequest="160"/>
+    </Grid>
+</ContentPage>

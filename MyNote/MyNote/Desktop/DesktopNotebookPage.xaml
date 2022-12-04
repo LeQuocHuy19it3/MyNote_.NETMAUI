@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNote.Desktop.DesktopNotebookPage"
+             Title="DesktopNotebookPage"
+             xmlns:viewModels="clr-namespace:MyNote.ViewModels"
+             xmlns:models="clr-namespace:MyNote.Models"
+             x:DataType="viewModels:NotebookViewModel"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="#f1f1f1"
+                          Offset="0.1" />
+                <GradientStop Color="#e7e7e7"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame BorderColor="Transparent" Grid.Row="0">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="#C664BE"
+                          Offset="0.1" />
+                    <GradientStop Color="#C0AEC3"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </Frame.Background>
+            <Grid Margin="10,0, 0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="180"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Text="NOTEBOOK" TextColor="White" FontFamily="InterExtraBold"
+                       FontAttributes="Bold" FontSize="18" Margin="0,0,0,0"
+                       Grid.Column="0" Grid.Row="0"/>
+                <Frame Grid.Column="1" Grid.Row="0" Padding="0" BorderColor="White"
+               CornerRadius="10" WidthRequest="200" HeightRequest="30"
+                       BackgroundColor="Transparent" HorizontalOptions="End"
+                       Margin="0,0,30,0">
+                    <SearchBar x:Name="searchNtebook" HorizontalTextAlignment="Start"
+                       HorizontalOptions="Center" Placeholder="Search"
+                       HeightRequest="30" TextColor="White" WidthRequest="200"
+                       FontFamily="InterRegular" FontSize="13" 
+                       PlaceholderColor="LightGray" VerticalTextAlignment="Center"
+                       ></SearchBar>
+                </Frame>
+                <HorizontalStackLayout Grid.Row="1" Grid.Column="0" 
+                                       HorizontalOptions="Fill" Margin="0,15,0,0">
+                    <Label Text="3" TextColor="White" FontFamily="InterMedium"/>
+                    <Label Text=" Notebooks" TextColor="White" FontFamily="InterMedium"/>
+                </HorizontalStackLayout>
+                <Button Text="Add Notebook" Grid.Row="1" Grid.Column="1"
+                        WidthRequest="125" BackgroundColor="Transparent"
+                        BorderColor="Transparent"  Margin="0,6,0,0"
+                        HorizontalOptions="End"/>
+            </Grid>
+        </Frame>
+        <ScrollView Grid.Row="1" >
+        <Frame  Margin="5,5,5,10" BorderColor="Transparent">
+            <CollectionView ItemsSource="{Binding notebookList}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:NotebookModel">
+                        <Frame HeightRequest="60" Padding="0" BackgroundColor="Transparent"
+                               BorderColor="Transparent">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Image Source="notebook.png" Grid.Row="0" Grid.Column="0"
+                                       HeightRequest="25" Margin="0,0,0,0"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding notebookName}" TextColor="#575757"
+                                        HeightRequest="50" BackgroundColor="Transparent"
+                                         FontFamily="InterMedium" WidthRequest="100"
+                                        FontSize="17" HorizontalOptions="Start" Margin="0,35,0,0"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding dateCreate}" TextColor="#8d8d8d"
+                                       FontFamily="InterMedium" FontSize="12" FontAttributes="Italic"
+                                       Margin="220,25,0,0"/>
+                                <Button Grid.Row="0" Grid.Column="2" Text="View" TextColor="Black"
+                                        HeightRequest="45" WidthRequest="100" Margin="0,0,20,0"
+                                        BackgroundColor="#C664BE"/>
+                                <BoxView Grid.Row="1" HorizontalOptions="FillAndExpand"
+                                         VerticalOptions="Center" HeightRequest="2"
+                                         BackgroundColor="Black" Grid.ColumnSpan="3"></BoxView>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </Frame>
+        </ScrollView>
+    </Grid>
+</ContentPage>

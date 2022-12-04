@@ -1,0 +1,191 @@
+is_global = true
+build_property.TargetFramework = net6.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MyNote
+build_property.ProjectDir = C:\Users\lequo\source\repos\MyNote\MyNote\
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Desktop/DesktopAboutPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Desktop.DesktopAboutPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Desktop\DesktopAboutPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Desktop\DesktopAboutPage.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Desktop/DesktopAccountPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Desktop.DesktopAccountPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Desktop\DesktopAccountPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Desktop\DesktopAccountPage.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Desktop/DesktopAllNotePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Desktop.DesktopAllNotePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Desktop\DesktopAllNotePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Desktop\DesktopAllNotePage.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Desktop/DesktopFavoritePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Desktop.DesktopFavoritePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Desktop\DesktopFavoritePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Desktop\DesktopFavoritePage.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Desktop/DesktopHomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Desktop.DesktopHomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Desktop\DesktopHomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Desktop\DesktopHomePage.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Desktop/DesktopHomeShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Desktop.DesktopHomeShell.xaml
+build_metadata.AdditionalFiles.TargetPath = Desktop\DesktopHomeShell.xaml
+build_metadata.AdditionalFiles.RelativePath = Desktop\DesktopHomeShell.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Desktop/DesktopLoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Desktop.DesktopLoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Desktop\DesktopLoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Desktop\DesktopLoginPage.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Desktop/DesktopNotebookPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Desktop.DesktopNotebookPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Desktop\DesktopNotebookPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Desktop\DesktopNotebookPage.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Desktop/DesktopNoteDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Desktop.DesktopNoteDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Desktop\DesktopNoteDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Desktop\DesktopNoteDetailPage.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Desktop/DesktopRegisterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Desktop.DesktopRegisterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Desktop\DesktopRegisterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Desktop\DesktopRegisterPage.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Desktop/NoteDetai.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Desktop.NoteDetai.xaml
+build_metadata.AdditionalFiles.TargetPath = Desktop\NoteDetai.xaml
+build_metadata.AdditionalFiles.RelativePath = Desktop\NoteDetai.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Desktop/ShellBase.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Desktop.ShellBase.xaml
+build_metadata.AdditionalFiles.TargetPath = Desktop\ShellBase.xaml
+build_metadata.AdditionalFiles.RelativePath = Desktop\ShellBase.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Mobile/IntroPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Mobile.IntroPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mobile\IntroPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mobile\IntroPage.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Mobile/LoginRegister/ForgotPassword.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Mobile.LoginRegister.ForgotPassword.xaml
+build_metadata.AdditionalFiles.TargetPath = Mobile\LoginRegister\ForgotPassword.xaml
+build_metadata.AdditionalFiles.RelativePath = Mobile\LoginRegister\ForgotPassword.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Mobile/LoginRegister/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Mobile.LoginRegister.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mobile\LoginRegister\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mobile\LoginRegister\LoginPage.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Mobile/LoginRegister/RegisterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Mobile.LoginRegister.RegisterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mobile\LoginRegister\RegisterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mobile\LoginRegister\RegisterPage.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Mobile/MainLayout/MobileAboutMePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Mobile.MainLayout.MobileAboutMePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mobile\MainLayout\MobileAboutMePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mobile\MainLayout\MobileAboutMePage.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Mobile/MainLayout/MobileAllNotePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Mobile.MainLayout.MobileAllNotePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mobile\MainLayout\MobileAllNotePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mobile\MainLayout\MobileAllNotePage.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Mobile/MainLayout/MobileAllSettingPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Mobile.MainLayout.MobileAllSettingPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mobile\MainLayout\MobileAllSettingPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mobile\MainLayout\MobileAllSettingPage.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Mobile/MainLayout/MobileFavoriteNotePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Mobile.MainLayout.MobileFavoriteNotePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mobile\MainLayout\MobileFavoriteNotePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mobile\MainLayout\MobileFavoriteNotePage.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Mobile/MainLayout/MobileHomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Mobile.MainLayout.MobileHomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mobile\MainLayout\MobileHomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mobile\MainLayout\MobileHomePage.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Mobile/MainLayout/MobileNotebookPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Mobile.MainLayout.MobileNotebookPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mobile\MainLayout\MobileNotebookPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mobile\MainLayout\MobileNotebookPage.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Mobile/MainLayout/MobileNoteDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Mobile.MainLayout.MobileNoteDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mobile\MainLayout\MobileNoteDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mobile\MainLayout\MobileNoteDetailPage.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Mobile/MainLayout/MobileSchedulePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Mobile.MainLayout.MobileSchedulePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mobile\MainLayout\MobileSchedulePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mobile\MainLayout\MobileSchedulePage.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Mobile/MainLayout/MobileSharePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Mobile.MainLayout.MobileSharePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mobile\MainLayout\MobileSharePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mobile\MainLayout\MobileSharePage.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Mobile/MainLayout/MobileShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Mobile.MainLayout.MobileShell.xaml
+build_metadata.AdditionalFiles.TargetPath = Mobile\MainLayout\MobileShell.xaml
+build_metadata.AdditionalFiles.RelativePath = Mobile\MainLayout\MobileShell.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Mobile/MainLayout/MobileTodolistPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Mobile.MainLayout.MobileTodolistPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mobile\MainLayout\MobileTodolistPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mobile\MainLayout\MobileTodolistPage.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/lequo/source/repos/MyNote/MyNote/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyNote.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
